@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>충전</title>
+<title>회원 탈퇴</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <style>
@@ -38,26 +38,21 @@ h1 {
   font-size: 24px;
   margin-bottom: 10px;
 }
+h2 {
+    text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.checkbox-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
 
-label {
+.checkbox-container label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[tel="number"]{
-    width: 95%;
-  padding: 20px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-select {
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -71,12 +66,12 @@ button {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: auto; /* 이 부분 변경 */
+  margin-bottom: 20px; /* 버튼과 컨테이너 사이 여백 추가 */
 }
 .button-container button {
-  margin-right: 10px; /* 버튼 간격을 조절하는 마진 값 */
+  margin-right: 10px;
 }
-
 button:hover {
   background-color: #dc4141;
 }
@@ -88,23 +83,24 @@ button:hover {
             </div>
     </div>
 <div class="container">
-    <h1 class="left-align">출금하기</h1>
-  <form id="paymentForm">
-    <label for="amount">출금 금액</label>
-    <input tel="number" id="amount" name="amount" placeholder="출금할 금액을 입력하세요." required>
-    <label for="paymentMethod">출금 계좌</label>
-    <select id="paymentMethod" name="paymentMethod">
-      <option value="creditCard">은행을 선택해 주세요</option>
-      <option value="bankTransfer">농협</option>
-      <option value="bankTransfer">기업은행</option>
-      <option value="bankTransfer">신한은행</option>
-    </select>
-    <input tel="number" id="amount2" name="amount2" placeholder="계좌번호를 입력해 주세요." required>
+    <h1 class="left-align">회원 탈퇴</h1>
+    <h1>탈퇴 안내</h1>
+    <div class="amount12">
+      <h2>회원탈퇴를 신청하기 전에 안내 사항을 꼭 확인해주세요.</h2>
+      <h2>사용하고 계신 아이디는 탈퇴할 경우 재사용 및 복구가 불가능 합니다.</h2>
+      <h2>탈퇴 후 회원정보 및 서비스 이용기록은 1년 보관 후 모두 삭제됩니다.</h2>
+      <h2>보유중인 충전금과 마일리지가 소멸되니 한번 더 확인 부탁드립니다.</h2>
+    </div>
+    <div class="checkbox-button-container">
+    <div class="checkbox-container">
+    <label>
+      <input type="checkbox" name="subscribe" value="yes"> 약관에 동의하기
+    </label>
+    </div>
     <div class="button-container">
-        <button type="submit">출금하기</button>
-        <button type="submit">취소</button>
+        <button type="submit">확인</button>
       </div>
-  </form>
+    </div>
 </div>
 <script src="script.js"></script>
 
