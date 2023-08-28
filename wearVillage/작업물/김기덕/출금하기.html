@@ -88,17 +88,20 @@ button:hover {
             </div>
     </div>
 <div class="container">
-    <h1 class="left-align">충전하기</h1>
+    <h1 class="left-align">출금하기</h1>
   <form id="paymentForm">
-    <label for="amount">충전 금액</label>
-    <input tel="number" id="amount" name="amount" placeholder="충전할 금액을 입력하세요." required>
+    <label for="amount">출금 금액</label>
+    <input tel="number" id="amount" name="amount" placeholder="출금할 금액을 입력하세요." required>
     <label for="paymentMethod">출금 계좌</label>
     <select id="paymentMethod" name="paymentMethod">
-      <option value="creditCard">선택한 계좌가 없습니다</option>
-      <option value="bankTransfer">농협 : 948217354</option>
+      <option value="creditCard">은행을 선택해 주세요</option>
+      <option value="bankTransfer">농협</option>
+      <option value="bankTransfer">기업은행</option>
+      <option value="bankTransfer">신한은행</option>
     </select>
+    <input tel="number" id="amount2" name="amount2" placeholder="계좌번호를 입력해 주세요." required>
     <div class="button-container">
-        <button type="submit">충전하기</button>
+        <button type="submit">출금하기</button>
         <button type="submit">취소</button>
       </div>
   </form>
