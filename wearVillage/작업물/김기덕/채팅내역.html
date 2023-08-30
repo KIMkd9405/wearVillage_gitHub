@@ -7,9 +7,19 @@
 </head>
 <style>
 * {
+    /* outline: solid 1px red; */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+/* 헤드 여백*/
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: solid 1px black;
+
+    padding: 30px;
 }
 
 a {
@@ -23,6 +33,9 @@ a {
 .chat-item{
     outline: solid 0.5px gray;
 }
+.chat-item1{
+    padding: 10px;
+}
 
 .chat-list {
     outline: solid 1px gray;
@@ -32,6 +45,8 @@ a {
     border-radius: 10px;
     margin-right: 20px;
     overflow: hidden;
+    margin-top: 20px;
+    height: 800px;
 }
 
 .chat-history {
@@ -39,16 +54,19 @@ a {
     background-color: #f7f7f7;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
 .list-section {
-    int
     margin-bottom: 20px;
 }
 
 .wrap {
-    padding: 40px 0;
     background-color: #A8C0D6;
+    height: 780px;
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 요소를 배치 */
+    justify-content: space-between;
 }
 .wrap h3 {
     text-align: center;
@@ -123,13 +141,34 @@ a {
     right: -15px;
     content: "▶";
     color: #dc4141;
+    }
+
+.wrap .chat-input{
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+}  
+.wrap .send-button{
+    display: flex;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    white-space: nowrap;
 }
 </style>
 <body>
+    <!-- 헤드 -->
+    <div class="header">여백</div>
+   
     <div class="container">
         <!-- 채팅 목록 -->
         <div class="chat-list">
             <div class="list-section">
+                <div class="chat-item1">
+                    채팅내역
+                </div>
+
                 <div class="chat-item">
                     <img src="avatar1.jpg" alt="채소" class="avatar">
                     <div class="chat-details">
@@ -178,8 +217,13 @@ a {
                     <div class="textbox">
                         그러면 18시 롯데마트 앞에서 뵙겠습니다.</div>
                 </div>
+                <div class="chat-input">
+                    <input type="text" class="chat-input" placeholder="메세지를 입력하세요...">
+                    <buton class="send-button">전송</buton>
+                </div>
             </div>
         </div>
+
     </div>
 </body>
 </html>
